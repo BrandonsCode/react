@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import Employee from './components/Employee';
 import { useState } from 'react';
 
@@ -7,16 +7,16 @@ function App() {
   const [role, setRole]= useState('dev');
   const showEmployees = true;
   return (
-    <div className="App">
+    <div className="App bg-red-300">
       {showEmployees ? (
         <>
-        <input 
+            <input 
               type="text"
               onChange={(e) => {
                 console.log(e.target.value);
                 setRole = (e.target.value);
               }}
-              />
+            />
             <Employee name = "Brandon" role="Intern"/>
             <Employee name = "Abby" role={role}/>
             <Employee name = "John"/>
